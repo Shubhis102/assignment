@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <title>day 2</title>
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+    }
+    /* css navbar */
+.navbar{
+background-color: black;
+height: 45px;
+color: white;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+
+}
+.logo{
+  background-image: url(amazon-dark-logo-png-transparent\ copy.png);
+  height: 50px;
+  width: 120px;
+  background-size: 120px 40px;
+  background-repeat: no-repeat;
+  margin-top: 15px;
+
+
+}
+
+.iconadd{
+  display: flex;
+  }
+  #add1{
+    font-size: 15px;
+  }
+#add2{
+  margin-left: 5px;
+  
+}
+.address{
+  margin-left: 15px;
+  align-items: center;
+  font-size: 14px;
+  padding: 1px;
+}
+
+.search{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 15px;
+  background-color: pink;
+  width :620px;
+  height : 30px;
+  border-radius: 2px;
+
+}
+.searchselect{
+  background-color: rgb(197, 197, 197);
+  width:50px;
+  text-align: center;
+  border-radius: 4px 0px 0px 4px;
+  border: none;
+}
+.search-input{
+  width: 100%;
+  border: none;
+}
+.icon{
+  width: 45px;
+  background-color: rgb(255, 192, 75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 4px 4px 0px;
+
+}
+
+.searchflag{
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.flag{
+  background-image: url(istockphoto-1313888774-612x612.png);
+  width: 15px;
+  height: 20px;
+  background-size: cover;
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+}
+.fa{
+  display: flex;
+  margin: 5px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.account{
+  width: 110px;
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+.end{
+  width:80px;
+  margin-left: 20px;
+}
+.small{
+  font-size: 12px;
+}
+
+/* css alert */
+#alert{
+  padding: 5px;
+}
+
+/* css calculator */
+#cal{
+  border: 2px solid rgb(103, 103, 103);
+  height: 300px;
+ padding: 40px;
+ 
+}
+.calculation{
+  margin: 10px;
+  border-radius: 5px;
+
+}
+#button{
+  background-color: rgb(203, 203, 255);
+  border: none;
+}
+#cal{
+  background-color: bisque;
+  border-radius: 2px;
+}
+
+/* css check */
+#check{
+  padding: 30px;
+}
+  </style>
+</head>
+<body>
+   <!-- amazon navbar -->
+<div class="navbar">
+  <div class="logo"></div>
+  <div class="address">
+    <p id="add1">Deliver to KUMAR</p>
+    <div class="iconadd">
+      <i class="fa-solid fa-location-dot"></i> <p id="add2">Patna 800011</p>
+    </div>
+  </div>
+    <div class="search">
+      <select class ="searchselect">
+        <option>All</option>
+        <input placeholder="Search Amazon.in" class="search-input"> 
+       <div class="icon"> <i class="fa-solid fa-magnifying-glass"></i></div>
+      </select>
+    </div>
+  
+  <div class="fa">
+     <div class="flag">
+     </div>
+      <select class ="searchflag">
+        <option >En</option>
+      </select>
+ </div>
+ <div class="account">
+  <p class="small">Hello, Kumar</p>
+  <select class = "account">
+    <option>Account & Lists</option>
+  </select>
+ </div>
+ <div class="end">
+  <p class="small">Returns</p>
+  <p>& Orders</p>
+ </div>
+
+
+
+
+</div>
+
+<!-- <center>
+  <h3>Write your text and see in pop up</h3>
+<div id ="alert">
+  <input type="text"  id="click">
+  <BUTTON onclick="submit()">click me </BUTTON>
+</div>
+</center> -->
+     <!-- marks calculation -->
+<center>
+<div class="calculation" id="cal">
+  <input type="text"  id="math" class="calculation" placeholder="Enter Math Marks"> <br>
+  
+  <input type="text"  id="science" class="calculation"  placeholder="Enter Science Marks"><br>
+
+  <input type="text"  id="computer" class="calculation"  placeholder="Enter Computer Marks"><br>
+  <input type="text"  id="history" class="calculation" placeholder="Enter History Marks"><br>
+
+  <button class="calculation" id="button" onclick="total()" >Calculate</button><br>
+ 
+  <input type="text"  id="totalmarks" class="calculation"  placeholder="Total Marks" >
+
+  <input type="text"  id="findper" class="calculation"  placeholder="Total%">
+
+
+</div>
+</center>
+         <!-- positive and negative -->
+<center>
+  <h3>Enter your number to check your number is positive or negative -:</h3>
+  <div id ="check">
+    <input type="text"  id="number" placeholder="Enter your number">
+    <BUTTON onclick="checked()">Check </BUTTON>
+  </div>
+  </center>
+        <!-- javascript -->
+  <script>
+    //js alert
+  function submit(){
+let a=document.getElementById("click").value;
+alert(a);
+}  
+submit();
+ //js calculator 
+function total(){
+  let math_Marks=document.getElementById("math").value;
+  let maths=Number(math_Marks);
+
+  let science_Marks=document.getElementById("science").value;
+  let sciences = Number(science_Marks);
+
+  let computer_Marks=document.getElementById("computer").value;
+  let computers = Number(computer_Marks);
+
+  let history_Marks=document.getElementById("history").value;
+  let historys = Number(history_Marks);
+
+  let sum = maths + sciences + computers + historys;
+  
+  document.getElementById("totalmarks").value= sum;
+
+  let percentage = (sum/400)*100;
+
+  document.getElementById("findper").value = percentage + "%";
+}
+total();
+
+function checked()
+{
+  let num = document.getElementById("number").value;
+  (num>= 0)? alert("positive") : alert("negative")
+}
+
+
+  </script>
+</body>
+</html>
