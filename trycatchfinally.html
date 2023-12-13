@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=
+  , initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    function pnumber(){
+      try{
+        let phone = document.getElementById("phonenumber").value;
+        if(phone*1 !== Number(phone))
+        {
+          throw new Error("Enter phone number not alphabet.")
+        }
+
+      }catch(error)
+      {
+        alert(error);
+      }finally{
+        alert("Passed");
+      }
+    }
+  </script>
+</head>
+<body>
+
+Phone Number : <input type="text" id="phonenumber">
+  <button onclick="pnumber()">submit</button>
+</body>
+</html>
