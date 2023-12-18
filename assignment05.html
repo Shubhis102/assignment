@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+
+/*Write a JavaScript program to find the maximum number in an array*/
+
+const numMax =[10,49,23,99,24,34];
+let max = numMax[0]
+for(let i=0;i<numMax.length;i++){
+if(max<numMax[i]){
+  max=numMax[i];
+}
+}
+document.write(max);
+
+
+/*Write a JavaScript function to check if a given number is prime.*/
+let a = prompt("Check  your number is prime or not :");
+let num = 0;
+for( let i=0 ; i<=a ;i++){
+  if(a % i== 0){
+    num++;
+  }
+}
+if (num == 2){
+  alert("prime");
+}else{
+  alert("not prime")
+}
+
+/*Write a javascrpt program to get two input value from the promp and then sum of these value and check
+,value is odd or even.
+eg: 
+let num1=prompt("Enter first number");
+let num2=prompt("Enter Second number");
+
+check the sum of num1 and num2 is odd or even*/
+
+let num1 = prompt("Enter first number");
+num1=Number(num1);
+let num2 = prompt("Enter second number");
+num2=Number(num2);
+let sum = num1 + num2;
+
+if(sum%2 == 0){
+  alert(sum + " number is even")
+}else{
+  alert(sum + " number is odd")
+}
+
+/*Write a JavaScript program to find the minimum number in an array*/
+
+const numMin =[10,49,23,99,24,34,5];
+let min = numMin[0]
+for(let i=0;i<numMin.length;i++){
+if(min>numMin[i]){
+  min=numMin[i];
+}
+}
+document.write(min);
+
+
+
+  </script>
+</body>
+</html>
