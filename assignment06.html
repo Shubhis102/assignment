@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  #main{
+    height: 500px;
+    width :90%;
+    border :2px solid black;
+   padding: 20px;
+   
+  
+  }
+  #one{
+    height:180px;
+    width:55%;
+    background-color: rgba(199, 245, 199, 0.636);
+    border-radius: 5px;
+   float: right;
+   padding: 10px 0px 0px 10px;
+    
+  }
+  #two{
+    height:340px;
+    width:35%;
+    background-color: rgba(199, 245, 199, 0.636);
+    border-radius: 5px;
+   float: left;
+   padding: 10px 0px 0px 10px;
+  }
+  #three{
+    height:140px;
+    width:38%;
+    background-color: rgba(199, 245, 199, 0.636);
+    border-radius: 5px;
+   float: right;
+   margin: 10px;
+   padding: 10px 0px 0px 10px;
+    
+  }
+</style>
+<body>
+  <div id="main">
+    <div id="one" >
+one
+    </div>
+    <div id="two">
+two
+    </div>
+    <div id="three">
+three
+    </div>
+  </div>
+
+  <script>
+    let animal=[
+      {name:"cow",leg:4},
+      {name:"peacock",leg:2},
+      {name:"snake",leg:0},
+    ]
+    let a = prompt("enter number of legs");
+
+    
+    if(a=4){
+      alert("you enter 4 legs which means cow");
+    }   else if(a=2){
+      alert("you enter 2 legs which means peacock");
+    }  else if(a=0){
+      alert("you enter 0 legs which means snake");
+    }else{
+      alert("please enter 4,2 or 0")
+    }
+  
+  
+    
+  </script>
+</body>
+</html>
