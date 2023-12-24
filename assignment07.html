@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+#box{
+  height:100px;
+  width: 200px;
+  background-color: aqua;
+  border-radius: 10px;
+  animation-name: move;
+  animation-duration: 5s;
+  position: relative;
+  animation-iteration-count: infinite;
+
+}
+@keyframes move {
+  0%   {left:0px; top:0px;}
+  50%  {left:83%; top:0px;}
+  100%  {left:0px; top:0px;}
+ 
+
+}
+button{
+  margin: 20px;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  background-color: blanchedalmond;
+  
+}
+  </style>
+</head>
+<body>
+<div id="box">
+
+</div>
+<center>
+<button onclick="">Start your animation</button>
+<button onclick="">Stop your animation</button></center>
+</body>
+<script>
+  // <!-- Write a javascript program to write you name and convert it into lower case and upper case -->
+  let name ="Shubhi Singh";
+  //alert(name.toLowerCase());
+  //alert(name.toUpperCase());
+
+
+  /*Write a javascript program to count number of space in given String*/
+let st="A simple sentence is a sentence that consists of just one independent clause"
+let count = st.split(" ").length-1;
+//alert(count);
+
+
+
+
+/*Write a javascript program to replace the word as follows
+let str="A simple sentence is a sentence that consists of just one independent clause"
+-is will replace from Ankit
+-just is replace from Kumar*/
+
+
+let str="A simple sentence is a sentence that consists of just one independent clause.";
+let str1=(str.replace("is","Ankit"));
+let str2 =(str1.replace("just","Kumar"));
+console.log(str2);
+  
+
+/* Write a javascript program to find out the duplicate words.
+let str="Ram is a good boy is a good is is a"*/
+
+let str4="Ram is a good boy is a good is is a"
+let str5=str4.split(" ");
+console.log(str5);
+let j=0
+for(let i =0 ; i<str5.length;i++){
+if (str5.indexOf[i]==str5.indexOf[j]){
+console.log(str5.indexOf[i]);
+j++;
+}};
+</script>
+</html>
