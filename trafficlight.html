@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+  <title>Document</title>
+</head>
+<style>
+#mainDiv{
+  height: 400px;
+  width: 150px;
+  background-color: white;
+  border: 3px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  align-items: center;
+
+}
+.div{
+  height: 100px;
+  width: 100px;
+  border: 1px solid rgb(0, 0, 0);
+  margin: 20px;
+  border-radius: 100%;
+  
+
+}
+#outer{
+  display: flex;
+  padding: 50px;
+  align-items: center;
+  
+}
+button{
+  width: 200px;
+  height: 50px;
+  margin: 30px;
+  background-color: aliceblue;
+  border-color: rgb(170, 170, 170);
+  border-radius: 50px;
+
+}
+</style>
+<body>
+  <div id="outer">
+<div id="mainDiv">
+  <div id="red" class="div"></div>
+  <div id="yellow" class="div"></div>
+  <div id="green" class="div"></div>
+</div>
+<div class="ebutton">
+  <button onclick="red()">RED</button>
+  <button onclick="yellow()">YELLOW</button>
+  <button onclick="green()">GREEN</button>
+</div>
+</div>
+<script>
+  function red(){
+    document.getElementById("red").style.backgroundColor ="red";
+  }
+  function yellow(){
+    document.getElementById("yellow").style.backgroundColor ="yellow";
+  }
+  function green(){
+    document.getElementById("green").style.backgroundColor ="green";
+  }
+
+</script>
+</body>
+</html>
