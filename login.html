@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    *{
+      margin: 0px;
+      padding: 0px;
+      background-color: black;
+    }
+    /* .outer_page{
+      margin-top: 15%;
+      height: 400px;
+      width: 350px;
+      background-color: rgba(255, 255, 255, 0.325);
+    } */
+    .circle{
+      height: 120px;
+      width: 120px;
+
+      
+      border-radius: 100%;
+    }
+   
+    #circle1{
+      background-image: linear-gradient(rgba(24,74,178,255), rgba(28,123,196,255));
+      /* object-fit: none;
+      object-position: 50px 50px; */
+      position: fixed;
+      top: 50px;
+      left: 380px;
+    }
+    #circle2{
+      background-image: linear-gradient(to right,rgba(198,71,38,255) ,rgba(226,136,26,255));
+      /* object-fit: none;
+      object-position: 50px 50px; */
+      position: fixed;
+      bottom: 130px;
+      right: 400px;
+    }
+    #box{
+      margin-top: 8%;
+      height: 300px;
+      width: 200px;
+      background-color: rgba(255, 255, 255, 0.168);
+      position: fixed;
+      top: 5px;
+      left: 450px;
+      border-radius: 5px;
+      border: 1px solid rgba(198, 198, 198, 0.477);
+      box-shadow: 0px 0px 30px 10px rgba(0, 0, 0, 0.403);
+color: white;
+padding: 20px;
+    }
+    h2{
+      background-color: transparent;
+      margin: 10px;
+    }
+    p{
+      background-color: transparent;
+      font-size: 15px;
+     text-align: left;
+     margin: 5px;
+    }
+    input{
+      width: 95%;
+      height: 20px;
+      border: none;
+      font-size: 10px;
+      padding: 5px 5px;
+      background-color: rgba(152, 152, 152, 0.303);
+      color: rgb(33, 33, 33);
+      border-radius: 2px;
+    }
+    .inputc{
+      background-color: transparent;
+      
+    }
+    #user{
+      margin-bottom: 20px;
+    }
+    #log{
+      width: 100%;
+      height: 30px;
+      margin: 30px 0px;
+      background-color: white;
+      border: none;
+      border-radius: 2px;
+      color: black;
+      font-size: 13px;
+    }
+    button{
+      width: 40%;
+      height: 25px;
+      background-color: rgba(255, 255, 255, 0.582);
+      border: none;
+      margin: 3px;
+      color: white;
+      font-size: 10px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body>
+  <center>
+  <div class="outer_page">
+
+    <div id="circle1" class="circle" ></div>
+    <div id="circle2" class="circle"></div>
+<div id="box">
+ <h2>Login Here</h2>
+ <div id="user" class="inputc">
+ <p>Username</p>
+ <input type="text" placeholder="Email or Phone" class="input">
+</div>
+<div id="password" class="inputc">
+ <p>Password</p>
+ <input type="password" placeholder="Password" class="input">
+</div>
+ <button id="log">Log In</button>
+ <button>
+  <!-- <i class="fa-brands fa-google"></i> -->
+  Google</button>
+ <button>
+  <!-- <i class="fa-brands fa-facebook" style="color: #ffffff;"></i> -->
+  Facebook</button>
+
+  
+</div>
+
+
+  </div>
+</center>
+</body>
+</html>
