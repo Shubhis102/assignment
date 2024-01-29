@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin: 50px;
+            padding: 2px;
+            text-align: center;
+            border: 1px;
+        }
+        td{
+            width: 100px;
+            height: 120x;
+            margin: 2px;
+            
+        }
+        tr{
+            background-color: rgb(255, 162, 23);
+            text-align: center;
+        }
+        .des{
+            height: 30px;
+            width: 120px;
+            border-radius: 5px;
+            border: none;
+            background-image: radial-gradient(circle, white,rgb(255, 162, 23));
+            
+        }
+     
+        input[type=text]
+    {
+        border-radius: 10px;
+       width: 150px;
+       height: 20px;
+        
+        
+    }
+    </style>
+</head>
+<body>
+    <center>
+    <table cellspacing="5px" width="80%" id="tableid" >
+    <thead>
+        <tr>
+            <td>NAME</td>
+            <td>AGE</td>
+            <td>PHONE NUMBER</td>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody> 
+    </table>
+    <input type="button" value="add your data " onclick="call()" id="buto" class="des">
+    <input type="button" value="delete your data " onclick="dele()" id="del" class="des">
+</center>
+
+    <script>
+        
+function call(){
+var tbodyRowCount = document.body.children[0].children[0].children[1].childElementCount;
+console.log(tbodyRowCount);
+    if(tbodyRowCount==0){
+        add();
+    }else if(tbodyRowCount>0){
+    let st_name = document.body.children[0].children[0].children[1].children[tbodyRowCount-1].children[0].children[0].value ;
+    let st_age = document.body.children[0].children[0].children[1].children[tbodyRowCount-1].children[1].children[0].value ;
+    let st_no = document.body.children[0].children[0].children[1].children[tbodyRowCount-1].children[2].children[0].value ;
+    if(st_name == "" || st_age == "" || st_no ==""){
+        alert("your table cell is empty");
+    } else{
+        add();
+    }      
+}
+}
+
+function dele(){
+    var tbodyRowCount = document.body.children[0].children[0].children[1].childElementCount;
+    document.body.children[0].children[0].children[1].removeChild(document.body.children[0].children[0].children[1].children[tbodyRowCount-1])
+    
+}
+
+
+function  add(){
+    
+    let createTr = document.createElement("tr");
+
+    let createNameTd = document.createElement("td");
+    let createNameField = document.createElement("input");
+    createNameField.setAttribute("type","text");
+    createNameField.setAttribute("placeholder","Your NAME");
+    createNameField.setAttribute("id", "st_name");
+    createNameTd.appendChild(createNameField);
+
+
+    let createAgetd = document.createElement("td");
+    let createAgeField = document.createElement("input");
+    createAgeField.setAttribute("type","text");
+    createAgeField.setAttribute("placeholder","Your AGE");
+    createAgeField.setAttribute("id", "st_age");
+    createAgetd.appendChild(createAgeField);
+
+    let createPhnonetd = document.createElement("td");
+    let createPhoneField = document.createElement("input");
+    createPhoneField.setAttribute("type","text");
+    createPhoneField.setAttribute("placeholder","Your PHONE");
+    createPhoneField.setAttribute("id", "st_phone");
+    createPhnonetd.appendChild(createPhoneField);
+    
+    createTr.appendChild(createNameTd);
+    createTr.appendChild(createAgetd);
+    createTr.appendChild(createPhnonetd);
+
+    document.getElementsByTagName("tbody")[0].appendChild(createTr);
+    
+    }
+
+
+
+    
+    </script>
+</body>
+</html>
